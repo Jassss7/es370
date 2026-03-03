@@ -24,6 +24,7 @@
         {
             if (s.Voti.Count == 0) throw new Exception("errore,lo studente non ha voti.");
             float somma = 0;
+        
             int count = 0;
             foreach (var voto in s.Voti)
             {
@@ -35,7 +36,7 @@
 
             }
             if (count == 0) throw new Exception($"errore,lo studente non risulta avere voti nell'anno {anno}.");
-            return somma / count;
+            return somma / (float)count;
         }
     }
 }
